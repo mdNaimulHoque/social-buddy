@@ -6,7 +6,7 @@ const Comment = (props) => {
     const [comment, setComment] = useState([]);
 
     useEffect(() => {
-        const url = `http://jsonplaceholder.typicode.com/comments?postId=${postId}`;
+        const url = `https://jsonplaceholder.typicode.com/comments?postId=${postId}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setComment(data))
